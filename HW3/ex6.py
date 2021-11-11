@@ -8,6 +8,7 @@
 def int_func(t):
     t1=t.capitalize()
     return t1
+print('вариант 1')
 print(int_func('text'))
 
 def int_func1(t):
@@ -19,4 +20,5 @@ def int_func1(t):
     t3=','.join(t2)
 
     return t3
+print('вариант 2')
 print(int_func1('text0 text1 text2 text3 '))

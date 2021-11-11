@@ -6,4 +6,18 @@
 # Если специальный символ введен после нескольких чисел,
 # то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 
+def input_list_num():
+    stop='!'
+    sum_num=0
+    while True:
+        list_num=input('введите числа через запятую: ')
+        list_num1=list_num.split(',')
+        for elem in list_num1:
+            if elem == stop:
+                return f'итоговая сумма: {sum_num}'
+            else:
+                elem=int(elem)
+                sum_num=sum_num+elem
+        print(f'итоговая сумма: {sum_num}')
 
+print(input_list_num())
