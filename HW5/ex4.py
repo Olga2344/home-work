@@ -11,9 +11,7 @@ with open(r"text_files/text4.txt", 'r') as f_obj:
     for line in f_obj:
         line=line.strip()
         temp_list=line.split(' ')
-        print(temp_list)
         with open (r"text_files/text4_1.txt", 'a') as f_obj:
             if temp_list[0] in eng_dict.keys():
                 temp_list1=(str(eng_dict.setdefault(temp_list[0]))+ ' ' + ' '.join(temp_list[1::]))
-                print(temp_list1)
                 print(temp_list1, file=f_obj)

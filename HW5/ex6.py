@@ -8,7 +8,23 @@
 # Информатика: 100(л) 50(пр) 20(лаб).
 # Физика: 30(л) — 10(лаб)
 # Физкультура: — 30(пр) —
-#
 # Пример словаря:
 # {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
+item_dict={}
 
+with open(r"text_files/text6.txt", 'r') as f_obj:
+    for line in f_obj:
+        sum_hours = 0
+        line=line.replace(':','')
+        line=line.split(' ')
+        for i in line[1::]:
+            i=i.split('(')
+            try:
+                if int(i[0]) == True:
+                    sum_hours = sum_hours + int(i[0])
+            except:
+                continue
+            else:
+                sum_hours=sum_hours+int(i[0])
+        item_dict[line[0]]=sum_hours
+    print(item_dict)
