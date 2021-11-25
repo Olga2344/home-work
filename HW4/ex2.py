@@ -9,5 +9,5 @@ from random import randrange
 
 num_lisi = [randrange(1, 200) for i in range(15)]
 print(num_lisi)
-sorted_num_list = [num_lisi[i] for i in range(len(num_lisi) - 1) if num_lisi[i] > num_lisi[i + 1]]
+sorted_num_list = [num_lisi[i] for i in range(1, len(num_lisi)) if num_lisi[i] > num_lisi[i - 1]]
 print(sorted_num_list)
