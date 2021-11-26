@@ -12,6 +12,7 @@
 # [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 import json
 profit=0
+count_firm=0
 average_profit=0
 average_dict={}
 firm_dict={}
@@ -22,7 +23,8 @@ with open(r"text_files/text7.txt", 'r') as f_obj:
         firm_dict[line[0]] = profit
         if profit >=0:
             average_profit+=profit
-    average_dict["average_profit"]=average_profit
+            count_firm+=1
+    average_dict["average_profit"]=average_profit/count_firm
     print(average_dict)
     print(firm_dict)
 
