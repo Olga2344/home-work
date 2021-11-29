@@ -11,9 +11,9 @@ class Road():
         self.__length = length
         self.__width = width
 
-    def metod_of_count(self):
-        amount= self.__length*self.__width* 2* 0.1
-        return amount
+    def metod_of_count(self, weight,sm):
+        amount= self.__length*self.__width* weight*sm
+        return f'{self.__length}м * {self.__width}м * {weight}кг * {sm}см = {amount}т'
 
 road_1=Road(10, 10)
-print(road_1.metod_of_count())
+print(road_1.metod_of_count(2,0.3))
