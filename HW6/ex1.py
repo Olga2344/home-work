@@ -10,16 +10,16 @@
 from time import sleep
 
 class TrafficLight():
-    _list_color=['красный', 'желтый', 'зеленый']
+    __list_color=['красный', 'желтый', 'зеленый']
 
     def running(self):
         count=0
         while count<3:
-            print(TrafficLight._list_color[0])
+            print(TrafficLight.__list_color[0])
             sleep(7)
-            print(TrafficLight._list_color[1])
+            print(TrafficLight.__list_color[1])
             sleep(2)
-            print(TrafficLight._list_color[2])
+            print(TrafficLight.__list_color[2])
             sleep(5)
             count+=1
         else:

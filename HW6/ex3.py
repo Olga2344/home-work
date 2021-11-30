@@ -25,8 +25,7 @@ class Emploee(Worker):
         return ' '.join([self.name, self.surname])
 
     def get_total_income(self):
-        total_income = self._income["wage"] + self._income["bonus"]
-        return total_income
+        return self._income["wage"] + self._income["bonus"]
 
 new_emploee_1 = Emploee('sdf', 'dfgas', 'uruur', 100, 44)
 new_emploee_2 = Emploee('dfg', 'werqw', 'cxvb', 100, 55)
