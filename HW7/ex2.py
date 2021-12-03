@@ -25,6 +25,7 @@ class Sute(Clothes):
         super().__init__(name)
         self.size = size
 
+    @property
     def amount_of_fabric(self):
         return (self.size / 6.5) + 0.5
 
@@ -34,6 +35,7 @@ class Coat(Clothes):
         super().__init__(name)
         self.higt = higt
 
+    @property
     def amount_of_fabric(self):
         return (self.higt * 2) + 0.3
 
@@ -41,8 +43,8 @@ class Coat(Clothes):
 new_coat = Coat('from market', 2)
 new_sute = Sute('from shop', 4)
 
-print(new_coat.amount_of_fabric())
-print(new_sute.amount_of_fabric())
+print(new_coat.amount_of_fabric)
+print(new_sute.amount_of_fabric)
 
-total_f=new_coat.amount_of_fabric()+new_sute.amount_of_fabric()
+total_f=new_coat.amount_of_fabric+new_sute.amount_of_fabric
 print(total_f)
