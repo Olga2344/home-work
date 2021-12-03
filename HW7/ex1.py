@@ -33,9 +33,9 @@ class Matrix():
                     for j in range(len(self.list_of_list[i])):
                         nw_mtrx[i][j] = self.list_of_list[i][j] + other.list_of_list[i][j]
 
-                return Matrix(nw_mtrx)
-            else:
-                return f'Invalid matrix size'
+                return f'new Matrix\n{Matrix(nw_mtrx)}'
+        else:
+            return f'Invalid matrix size'
 
 
 my_matrix1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [3, 2, 1]])
